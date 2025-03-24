@@ -8,7 +8,7 @@ Usage example:
 # First you need to create a normal cce cluster
 # https://github.com/iits-consulting/terraform-opentelekomcloud-project-factory/tree/master/modules/cce
 module "cce" {
-  source = "iits-consulting/cce/opentelekomcloud"
+  source = "iits-consulting/cce-gpu-node-pool/opentelekomcloud"
   name   = "mycompany-dev-cluster"
 
   cluster_vpc_id            = module.vpc.vpc.id
@@ -23,7 +23,7 @@ module "cce" {
 }
 
 module "cce_gpu_node_pool" {
-  source = "iits-consulting/cce/opentelekomcloud"
+  source = "iits-consulting/cce-gpu-node-pool/opentelekomcloud"
 
   name_prefix                     = module.cce.cluster_name
   cce_cluster_id                  = module.cce.cluster_id
@@ -112,4 +112,3 @@ No modules.
 
 No outputs.
 <!-- END_TF_DOCS -->
-
