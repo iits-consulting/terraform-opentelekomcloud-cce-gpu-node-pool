@@ -151,14 +151,14 @@ locals {
 
 variable "gpu_beta_enabled" {
   type        = bool
-  description = "Enable GPU Beta Addon"
+  description = "Install GPU Beta Addon"
   default     = true
 }
 
 variable "gpu_beta_version" {
   type        = string
-  description = "Version of the GPU Beta Addon Template (default: 2.0.46)"
-  default     = "2.0.46"
+  description = "Version of the GPU Beta Addon Template (CCE AI Suite)"
+  default     = "latest"
 }
 
 variable "gpu_driver_url" {
